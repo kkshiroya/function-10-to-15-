@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    let sayHello = function () {
+        console.log('Hello Reader!');
+    }
+
+    sayHello();
+    // /////////////////////////////////////////////////////
+    function name(name, callback) {
+        console.log("Hello " + name);
+        callback();
+    }
+
+    name('User', function () {
+        console.log("Welcome to HubSpot!");
+    });
+    // /////////////////////////////////////////////////////
+    function recurse(n) {
+        if (n <= 1) return n;
+        else return recurse(n - 1) + recurse(n - 2);
+    }
+
+    console.log(recurse(4))
+    // ////////////////////////////////////////////////////
+    setTimeout(function () {
+        console.log('Hello Reader!');
+    }, 3000);
+    // //////////////////////////////////////////////////////
+    let i = 0;
+
+    setInterval(() => console.log(i++), 1000);
+    // ///////////////////////////////////////////////////////
+    const greeting = (name) => { return `Hello ${name}`; }
+
+    console.log(greeting("HubSpot"));
+    // ////////////////////////////////////////////////////////
+    for (let i = 0; i < 10; i++) {
+        if (i == 5) {
+            break;
+        }
+
+        console.log(i);
+    }
+    // ///////////////////////////////////////////////////////
+    function Person(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    let person = new Person('John', 18);
+    console.log(person);
+    // /////////////////////////////////////////////////////////
+    class Car {
+        constructor(make, model) {
+            this.make = make;
+            this.model = model;
+        }
+
+    }
+
+    let car = new Car('Ford', 'Mustang');
+
+    console.log(car);
+    // ///////////////////////////////////////////////////////////
+    function sum(a, b) {
+        return a + b;
+    }
+
+    let result = sum(1, 2);
+    alert(result);
+    // ////////////////////////////////////////////////////////////
+    function greet(firstName) {
+        function SayHello() {
+            alert("Hello " + firstName);
+        }
+
+        return SayHello();
+    }
+
+    greet("Steve");
+    // //////////////////////////////////////////////////////////////
+    function loop() {
+        for (var i = 0; i < 10; i++) {
+            console.log("hello");
+        }
+    }
+    // ////////////////////////////////////////////////////////////////
+    
+</script>
+
+</html>
